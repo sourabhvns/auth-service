@@ -11,19 +11,19 @@ module.exports = function(app) {
   });
 
   app.post(
-    "/api/user/:id/role",
+    "/api/users/:id/role",
     [authJwt.verifyToken],
     controller.assignRole
   );
 
   app.get(
-    "/api/user/:id/role",
+    "/api/users/:id/role",
     [authJwt.verifyToken],
     controller.getUserRole
   );
 
   app.post(
-    "/api/user/:id/permission",
+    "/api/users/:id/permission",
     [authJwt.verifyToken],
     controller.checkUserPermission
   );
